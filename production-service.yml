@@ -17,5 +17,5 @@ spring:
     sampler:
       probability: 1
       
-env: test-2019
+env: test-2020
 branch: master
