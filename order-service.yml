@@ -19,9 +19,9 @@ spring:
 
 
 #自定义负载均衡策略
-production-service:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+# production-service:
+#   ribbon:
+#     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
 
 
