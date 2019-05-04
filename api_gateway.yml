@@ -4,6 +4,17 @@ server:
 spring:
   application:
     name: api_gateway
+  rabbitmq:
+    host: 10.211.55.9
+    port: 5672
+    username: ken
+    password: ken
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 
 #指定注册中心地址
