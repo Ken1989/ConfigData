@@ -1,5 +1,5 @@
 server:
-  port: 8771
+  port: 8775
 
 #指定注册中心地址
 eureka:
@@ -17,5 +17,5 @@ spring:
     sampler:
       probability: 1
       
-env: dev
+env: test
 branch: master
