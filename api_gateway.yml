@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: api_gateway
+
+
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+zuul:
+  routes:
+    order-service: /apigateway/order/**
+    production-service: /apigateway/product/**
+  #ignored-services: order-service
+  ignored-patterns: /*-service/**
+  sensitive-headers:
