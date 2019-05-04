@@ -1,5 +1,5 @@
 server:
-  port: 8774
+  port: 8771
 
 #指定注册中心地址
 eureka:
@@ -16,6 +16,18 @@ spring:
   sleuth:
     sampler:
       probability: 1
-      
+  rabbitmq:
+    host: 10.211.55.9
+    port: 5672
+    username: ken
+    password: ken
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+        
 env: test-2020
 branch: master
