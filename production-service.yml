@@ -5,7 +5,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.26.170.130:8761/eureka/
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
@@ -14,16 +14,16 @@ eureka:
 spring:
   application:
     name: production-service
-  zipkin:
-    base-url: http://10.211.55.9:9411/
-  sleuth:
-    sampler:
-      probability: 1
+#   zipkin:
+#     base-url: http://10.211.55.9:9411/
+#   sleuth:
+#     sampler:
+#       probability: 1
   rabbitmq:
-    host: 10.211.55.9
+    host: 172.26.170.130
     port: 5672
-    username: ken
-    password: ken
+    username: guest
+    password: guest
 
 management:
   endpoints:
