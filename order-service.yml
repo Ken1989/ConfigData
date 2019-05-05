@@ -11,11 +11,11 @@ server:
 spring:
   application:
     name: order-service
-  zipkin:
-    base-url: http://10.211.55.9:9411/
-  sleuth:
-    sampler:
-      probability: 1
+#   zipkin:
+#     base-url: http://10.211.55.9:9411/
+#   sleuth:
+#     sampler:
+#       probability: 1
   rabbitmq:
     host: 172.26.170.130
     port: 5672
