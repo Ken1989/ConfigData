@@ -1,1 +1,38 @@
+server:
+  port: 8900
 
+
+eureka:
+  client:
+     serviceUrl:
+       defaultZone: http://localhost:8080/eureka/
+
+#服务的名称
+spring:
+  application:
+    name: user_service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+#自定义负载均衡策略
+production-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        #指的是建立连接所用的时间
+        connectTimeout: 4000
+        #指的是建立连接后从服务器读取到可用资源所用的时间
+        readTimeout: 4000
